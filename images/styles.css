@@ -91,7 +91,7 @@ footer {
     }
     container {
         display: flex;
-    }
+        }
     .image2 {
         width: 100%;
         border-radius: 2% 0 0 2%;
