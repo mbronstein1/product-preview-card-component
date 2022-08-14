@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Frontend Mentor - Product preview card component solution
 
 This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
@@ -12,11 +11,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 This solution from Frontend Mentor uses HTML and CSS in an attempt to replicate a pre-existing product preview card component from scratch. Flexbox and media queries were used to achieve correct positioning and responsiveness for multiple screens.
@@ -30,12 +24,11 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa/hub/product-preview-card-component-using-html-css-flexbox-media-queries-fc2BuIDlMt](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa/hub/product-preview-card-component-using-html-css-flexbox-media-queries-fc2BuIDlMt)
+- Live Site URL: [https://mbronstein1.github.io/product-preview-card-component/](https://mbronstein1.github.io/product-preview-card-component/)
 
 ## My process
-
-
+First, I organized the HTML into different sections, allowing for simple flexbox positioning later as I moved to the CSS. I developed the CSS with a mobile-first mindset, creating a media query to adjust the formatting of the card component as the screen gets bigger.
 
 ### Built with
 
@@ -47,90 +40,39 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+One specific thing I learned while working on this solution is how to change images when adjusting the size of the screen with media queries. 
 
-To see how you can add code snippets, see below:
-
+I included two different image elements w/ a class of "image1" and "image2" respectively. An ID would have also worked in this scenario because they were unique identifiers.
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<img class="image1" src="images/image-product-mobile.jpg" alt="product image">
+<img class="image2" src="images/image-product-desktop.jpg" alt="product image">
 ```
+
+Then in the main CSS section I included the following:
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.image1 {
+    width: 100%;
+    border-radius: 2% 2% 0 0;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+.image2 {
+    display: none;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Then I added a media query for viewports wider than 375px, and included the following:
+```css
+.image2 {
+        display: block;
+        width: 100%;
+        border-radius: 2% 0 0 2%;
+        object-fit: cover;
+    }
+    .image1 {
+        display: none;
+    }
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
-=======
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/mbronstein1/product-preview-card-component/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mbronstein1/product-preview-card-component/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
->>>>>>> 5dd7ec9d7257a6553f705f03f9451cf21c8de672
+I am still trying to get comfortable with responsiveness, especially as browsers get smaller. I was able to create the card component and allow it to react to the browser successfully as it gets larger, but when the browser got smaller, the items within the card would squeeze together but maintain their size, causing the card to get taller, eventually to the point where the browser would require a scroll bar to view the entire card. Also the image on the left of the card would get progressively more squished width-wise and massively distorted. I still have a lot to learn, but this was a fun and relatively easy challenge exploring simple elements of HTML and CSS.
